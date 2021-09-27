@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 5000
+const port = process.env.PORT || 5000
 const math = require('mathjs')
 
 app.use(express.json())
@@ -10,6 +11,6 @@ app.use('/matriz',require('./endpoint/matriz'))
 
 app.listen(port,()=>{
 
-console.log('escuchando puerto 5000')
+console.log(`àpp running on ${port}`)
 
 })
